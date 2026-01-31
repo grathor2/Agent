@@ -1,0 +1,4 @@
+Test run completed at Wed Nov 26 11:00:58 UTC 2025
+Test tags: @set2-spartan
+Base URL: https://ui.dataplane.eng4.int.cequence.ai/
+Test status: Some tests failed (exit code: 1)

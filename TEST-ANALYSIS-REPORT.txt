@@ -1,0 +1,105 @@
+
+===============================================================================
+                       TEST EXECUTION ANALYSIS REPORT                         
+===============================================================================
+
+Generated: November 26, 2025 at 20:02:46
+
+-------------------------------------------------------------------------------
+TEST EXECUTION OVERVIEW
+-------------------------------------------------------------------------------
+
+Total Tests: 126
+Pass Rate: 57.9%
+Duration: 53.42 minutes
+Status: 🔴 CRITICAL - IMMEDIATE ACTION REQUIRED
+
+-------------------------------------------------------------------------------
+RESULTS BREAKDOWN
+-------------------------------------------------------------------------------
+
+✅ Passed:   73 tests ( 57.9%)
+❌ Failed:   47 tests ( 37.3%)
+⚠️  Flaky:     6 tests (  4.8%)
+⊘  Skipped:   0 tests (  0.0%)
+
+-------------------------------------------------------------------------------
+TOP ISSUES
+-------------------------------------------------------------------------------
+
+• Timeout Issues: 84 failures (98%)
+• Assertion Failures: 2 failures (2%)
+
+-------------------------------------------------------------------------------
+MOST AFFECTED TEST FILES
+-------------------------------------------------------------------------------
+
+1. settings/trafficManagement.spec.ts: 38 failure(s)
+2. spartan/transactionMitigation.spec.ts: 28 failure(s)
+3. spartan/transactionDetection.spec.ts: 20 failure(s)
+
+-------------------------------------------------------------------------------
+TEST DETAILS BY FILE
+-------------------------------------------------------------------------------
+
+settings/trafficManagement.spec.ts
+  ✓ Passed: 21 | ✗ Failed: 19 | ⚠ Flaky: 0 | Total: 40
+
+spartan/transactionDetection.spec.ts
+  ✓ Passed: 40 | ✗ Failed: 14 | ⚠ Flaky: 5 | Total: 59
+
+spartan/transactionMitigation.spec.ts
+  ✓ Passed: 12 | ✗ Failed: 15 | ⚠ Flaky: 0 | Total: 27
+
+
+-------------------------------------------------------------------------------
+CRITICAL ANALYSIS
+-------------------------------------------------------------------------------
+
+
+🔴 CRITICAL STATUS - IMMEDIATE ACTION REQUIRED!
+
+The test suite has less than 60% pass rate. This indicates severe instability
+that must be addressed immediately:
+
+IMMEDIATE ACTIONS:
+1. Halt feature development until stability improves
+2. Create emergency task force to investigate failures
+3. Review recent code changes that may have caused regression
+4. Consider rolling back recent deployments
+5. Schedule emergency meeting with development team
+
+ROOT CAUSE ANALYSIS NEEDED:
+
+- TIMEOUT EPIDEMIC: Over 70% of failures are timeouts
+  → Check application performance and response times
+  → Review database query performance
+  → Investigate network connectivity issues
+  → Consider infrastructure scaling issues
+
+-------------------------------------------------------------------------------
+RECOMMENDATIONS
+-------------------------------------------------------------------------------
+
+Priority 1: Address 86 Failing Tests
+- Group failures by root cause
+- Assign owners to investigate each failure category
+- Set deadline for resolution (recommended: 48 hours)
+
+Priority 2: Stabilize 5 Flaky Tests
+- Flaky tests mask real issues and reduce confidence
+- Add proper waits and improve test reliability
+- Consider disabling until fixed
+
+Priority 3: Test Maintenance
+- Review test data management
+- Update selectors that may be outdated
+- Improve error messages for better debugging
+
+===============================================================================
+                            END OF REPORT                                     
+===============================================================================
+
+Build: https://gitlab.com/cequence/qa/platform-ui-automation/-/jobs/12224262177
+Commit: d513383 - Resolve CEQASP-10369 Verify SDE Filters are preserved on Editing
+Author: Abhishek Nigam
