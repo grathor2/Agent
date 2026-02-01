@@ -54,3 +54,6 @@ htmlcov/
 # Temporary
 *.tmp
 *.log
+terraform.tfstate*
+.terraform/
+.terraform.lock.hcl
