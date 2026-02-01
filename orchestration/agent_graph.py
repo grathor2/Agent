@@ -13,18 +13,22 @@ from utils.logger import get_logger
 
 logger = get_logger(__name__)
 
+def merge_dicts(a: Dict[str, Any], b: Dict[str, Any]) -> Dict[str, Any]:
+    return {**a, **b}
+
+
 class AgentState(TypedDict):
     """State for agent graph."""
-    input: Dict[str, Any]
-    normalized_input: Dict[str, Any]
-    plan: Dict[str, Any]
-    intent_classification: Dict[str, Any]
-    knowledge_retrieval: Dict[str, Any]
-    memory_data: Dict[str, Any]
-    reasoning: Dict[str, Any]
-    response_synthesis: Dict[str, Any]
-    guardrails: Dict[str, Any]
-    final_response: Dict[str, Any]
+    input: Annotated[Dict[str, Any], merge_dicts]
+    normalized_input:  Annotated[Dict[str, Any], merge_dicts]
+    plan: Annotated[Dict[str, Any], merge_dicts]
+    intent_classification: Annotated[Dict[str, Any], merge_dicts]
+    knowledge_retrieval: Annotated[Dict[str, Any], merge_dicts]
+    memory_data: Annotated[Dict[str, Any], merge_dicts]
+    reasoning: Annotated[Dict[str, Any], merge_dicts]
+    response_synthesis: Annotated[Dict[str, Any], merge_dicts]
+    guardrails: Annotated[Dict[str, Any], merge_dicts]
+    final_response: Annotated[Dict[str, Any], merge_dicts]
     execution_log: Annotated[List[Dict[str, Any]], add]
     errors: Annotated[List[str], add]
 
